@@ -1,5 +1,7 @@
 # Amazon Clone by Joshua Alvarez
 
+Link to live app: https://clone-8b7a4.web.app/
+
 This project was created using React.js, JavaScript, HTML, CSS, and firebase.
 
 ## Functionality present in app
