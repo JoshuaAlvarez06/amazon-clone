@@ -22,10 +22,10 @@ This project was created using React.js, JavaScript, HTML, CSS, and firebase.
 
 ![Cart](/src/images/screenshot3.png)
 
-### Checkout
+### Checkout Page
 
 ![Checkout](/src/images/screenshot4.png)
 
-### Orders
+### Orders Page
 
 ![Orders](/src/images/screenshot5.png)
