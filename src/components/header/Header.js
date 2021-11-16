@@ -4,7 +4,7 @@ import { useStateValue } from "../../StateProvider";
 import "./Header.css";
 import { auth } from "../../firebase";
 
-const Header = () => {
+const Header = ({ setNavMenuVisible, navMenuVisible }) => {
   const [{ cart, user }] = useStateValue();
   const handleAuthentication = () => {
     if (user) {
@@ -12,9 +12,11 @@ const Header = () => {
     }
   };
 
+  const toggleNavMenu = () => setNavMenuVisible(!navMenuVisible);
+
   return (
     <div className="header">
-      <Link to="/">
+      <Link to="/" onClick={() => setNavMenuVisible(false)}>
         <img
           className="headerLogo"
           src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
@@ -26,6 +28,11 @@ const Header = () => {
         {/* Logo */}
         <i className="fas fa-search headerSearchIcon"></i>
       </div>
+      {!navMenuVisible ? (
+        <i onClick={toggleNavMenu} className="fas fa-bars headerBars"></i>
+      ) : (
+        <i onClick={toggleNavMenu} className="fas fa-times headerBars"></i>
+      )}
       <div className="headerNav">
         <Link to={!user && "/login"}>
           <div onClick={handleAuthentication} className="headerOption">

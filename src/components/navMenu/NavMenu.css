@@ -1,0 +1,39 @@
+.navMenu {
+  height: fit-content;
+  background-color: rgb(35, 47, 62);
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.navMenuContainer {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.navMenuOption {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: right;
+  width: 100vw;
+}
+
+.navMenuOptionLineOne,
+.navMenuOptionLineTwo,
+.navMenuOptionBasket i {
+  color: #fff;
+}
+
+.navMenuOptionLineOne {
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.navMenuOptionLineTwo {
+  font-size: 15px;
+  font-weight: 800;
+}

@@ -19,6 +19,7 @@
 
 .homeImage {
   width: 100%;
+  max-width: 100vw;
   z-index: -1;
   margin-bottom: -280px;
   mask-image: linear-gradient(
@@ -26,6 +27,13 @@
     rgba(0, 0, 0, 1),
     rgba(0, 0, 0, 0.151)
   );
+}
+
+@media screen and (max-width: 768px) {
+  .homeRow {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 1028px) {

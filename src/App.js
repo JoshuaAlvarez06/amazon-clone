@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
@@ -11,6 +11,7 @@ import { useStateValue } from "./StateProvider";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./components/orders/Orders";
+import NavMenu from "./components/navMenu/NavMenu";
 
 const { REACT_APP_PUBLISHABLE_KEY } = process.env;
 
@@ -18,6 +19,7 @@ const promise = loadStripe(REACT_APP_PUBLISHABLE_KEY);
 
 function App() {
   const [{ _ }, dispatch] = useStateValue();
+  const [navMenuVisible, setNavMenuVisible] = useState(false);
 
   React.useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -42,7 +44,16 @@ function App() {
           path="/orders"
           element={
             <>
-              <Header />
+              <Header
+                setNavMenuVisible={setNavMenuVisible}
+                navMenuVisible={navMenuVisible}
+              />
+              {navMenuVisible && (
+                <NavMenu
+                  setNavMenuVisible={setNavMenuVisible}
+                  navMenuVisible={navMenuVisible}
+                />
+              )}
               <Orders />
             </>
           }
@@ -51,7 +62,16 @@ function App() {
           path="/payment"
           element={
             <>
-              <Header />
+              <Header
+                setNavMenuVisible={setNavMenuVisible}
+                navMenuVisible={navMenuVisible}
+              />
+              {navMenuVisible && (
+                <NavMenu
+                  setNavMenuVisible={setNavMenuVisible}
+                  navMenuVisible={navMenuVisible}
+                />
+              )}
               <Elements stripe={promise}>
                 <Payment />
               </Elements>
@@ -62,7 +82,16 @@ function App() {
           path="/checkout"
           element={
             <>
-              <Header />
+              <Header
+                setNavMenuVisible={setNavMenuVisible}
+                navMenuVisible={navMenuVisible}
+              />
+              {navMenuVisible && (
+                <NavMenu
+                  setNavMenuVisible={setNavMenuVisible}
+                  navMenuVisible={navMenuVisible}
+                />
+              )}
               <Checkout />
             </>
           }
@@ -72,7 +101,16 @@ function App() {
           path="/"
           element={
             <>
-              <Header />
+              <Header
+                setNavMenuVisible={setNavMenuVisible}
+                navMenuVisible={navMenuVisible}
+              />
+              {navMenuVisible && (
+                <NavMenu
+                  setNavMenuVisible={setNavMenuVisible}
+                  navMenuVisible={navMenuVisible}
+                />
+              )}
               <Home />
             </>
           }

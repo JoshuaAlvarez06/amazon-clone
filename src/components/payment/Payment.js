@@ -118,7 +118,9 @@ const Payment = () => {
                 <CurrencyFormat
                   renderText={(value) => (
                     <>
-                      <h3>Order Total: {value}</h3>
+                      <h3 style={{ marginTop: "10px" }}>
+                        Order Total: {value}
+                      </h3>
                     </>
                   )}
                   decimalScale={2}

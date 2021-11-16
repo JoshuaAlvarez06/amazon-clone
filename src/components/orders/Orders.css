@@ -1,5 +1,7 @@
 .orders {
   padding: 20px 80px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .orders > h1 {

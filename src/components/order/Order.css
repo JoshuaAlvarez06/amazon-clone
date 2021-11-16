@@ -16,3 +16,18 @@
   font-weight: 500;
   text-align: right;
 }
+
+@media screen and (max-width: 768px) {
+  .order {
+    overflow-x: hidden;
+  }
+
+  .orderId {
+    position: unset;
+    font-size: 13px;
+  }
+
+  .orderTotal {
+    text-align: left;
+  }
+}

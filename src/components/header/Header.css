@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .headerLogo {
@@ -37,6 +38,10 @@
   padding: 10px;
   border: none;
   height: 12px;
+}
+
+.headerBars {
+  display: none;
 }
 
 .headerNav {
@@ -72,4 +77,27 @@
 .headerBasketCount {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .headerLogo {
+    width: 75px;
+  }
+
+  .headerBars {
+    display: block;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+  }
+
+  .headerSearch {
+    display: none;
+  }
+
+  .headerNav {
+    display: none;
+  }
 }

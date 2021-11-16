@@ -30,3 +30,9 @@
   color: #111;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .subtotal {
+    max-width: 100vw;
+  }
+}

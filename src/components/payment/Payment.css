@@ -46,3 +46,14 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
+
+@media screen and (max-width: 768px) {
+  .paymentSection:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .paymentTitle {
+    margin-bottom: 10px;
+  }
+}
