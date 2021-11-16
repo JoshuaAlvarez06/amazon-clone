@@ -34,12 +34,16 @@ const Orders = () => {
         {orders?.map(
           (order, index) => index < viewCount && <Order order={order} />
         )}
-        {orders.length > viewCount && (
+        {orders.length > viewCount ? (
           <button
             className="ordersBtn"
             onClick={() => setViewCount(viewCount + 3)}
           >
             View More Orders
+          </button>
+        ) : (
+          <button className="ordersBtn" onClick={() => setViewCount(3)}>
+            View Less Orders
           </button>
         )}
       </div>
