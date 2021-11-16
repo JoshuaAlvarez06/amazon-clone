@@ -30,18 +30,20 @@ const Orders = () => {
   return (
     <div className="orders">
       <h1>{user ? "Your Orders" : "You must be logged in to view orders"}</h1>
+      <p>{user && !orders.length && "No past orders"}</p>
       <div className="ordersOrder">
         {orders?.map(
           (order, index) => index < viewCount && <Order order={order} />
         )}
-        {orders.length > viewCount ? (
+        {orders.length > viewCount && (
           <button
             className="ordersBtn"
             onClick={() => setViewCount(viewCount + 3)}
           >
             View More Orders
           </button>
-        ) : (
+        )}
+        {orders.length === viewCount && (
           <button className="ordersBtn" onClick={() => setViewCount(3)}>
             View Less Orders
           </button>

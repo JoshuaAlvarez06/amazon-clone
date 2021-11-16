@@ -7,7 +7,7 @@ import { useStateValue } from "../../StateProvider";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [{ cart, user }] = useStateValue();
+  const [{ user }] = useStateValue();
 
   AOS.init();
 

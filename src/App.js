@@ -18,7 +18,7 @@ const { REACT_APP_PUBLISHABLE_KEY } = process.env;
 const promise = loadStripe(REACT_APP_PUBLISHABLE_KEY);
 
 function App() {
-  const [{ _ }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
   const [navMenuVisible, setNavMenuVisible] = useState(false);
 
   React.useEffect(() => {

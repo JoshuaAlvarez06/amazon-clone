@@ -1,13 +1,13 @@
-import React from 'react';
-import { useStateValue } from '../../StateProvider';
-import './Product.css';
+import React from "react";
+import { useStateValue } from "../../StateProvider";
+import "./Product.css";
 
 const Product = ({ id, title, image, price, rating }) => {
-  const [{ cart }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   const addToCart = () => {
     dispatch({
-      type: 'ADD_TO_CART',
+      type: "ADD_TO_CART",
       item: {
         id: id,
         title: title,
