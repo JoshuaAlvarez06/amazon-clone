@@ -1,6 +1,7 @@
 # Amazon Clone by Joshua Alvarez
 
 Link to live app: https://clone-8b7a4.web.app/
+This project was created using React.js, JavaScript, HTML, CSS, and firebase.
 
 ## Test User Information
 
@@ -12,8 +13,6 @@ Link to live app: https://clone-8b7a4.web.app/
 1. Card Expiration Date: 04/24
 1. Card CVC: 242
 1. Card Zip: 42424
-
-This project was created using React.js, JavaScript, HTML, CSS, and firebase.
 
 ## Functionality present in app
 
