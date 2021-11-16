@@ -2,7 +2,7 @@
 
 Link to live app: https://clone-8b7a4.web.app/
 
-### Test User Information
+## Test User Information
 
 ##### (Just press 42 repeatedly until you reach the end for card information.)
 
