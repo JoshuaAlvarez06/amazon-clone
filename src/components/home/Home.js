@@ -1,15 +1,29 @@
-import React from 'react';
-import Product from '../product/Product';
-import './Home.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from "react";
+import Product from "../product/Product";
+import "./Home.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useStateValue } from "../../StateProvider";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [{ cart, user }] = useStateValue();
+
   AOS.init();
 
   return (
     <div className="home">
       <div className="homeContainer">
+        {!user && (
+          <div className="homeSignInContainer">
+            <div className="homeSignIn">
+              <h3>Sign in for the best experience</h3>
+              <Link className="homeSignInBtn" to="/login">
+                Sign in securely
+              </Link>
+            </div>
+          </div>
+        )}
         <img
           className="homeImage"
           src="https://m.media-amazon.com/images/I/611UiKJ2UAL._SX3000_.jpg"
