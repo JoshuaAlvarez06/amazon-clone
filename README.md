@@ -4,14 +4,14 @@ Link to live app: https://clone-8b7a4.web.app/
 
 ### Test User Information
 
+##### (Just press 42 repeatedly until you reach the end for card information.)
+
 1. Test Email: test@test.com
 1. Test Password: password
 1. Test Card: 4242 4242 4242 4242
 1. Card Expiration Date: 04/24
 1. Card CVC: 242
 1. Card Zip: 42424
-
-#### (Just press 42 repeatedly until you reach the end.)
 
 This project was created using React.js, JavaScript, HTML, CSS, and firebase.
 
